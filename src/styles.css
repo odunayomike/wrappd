@@ -1,0 +1,6 @@
+@import './components/landing/fig-tokens.css';
+
+* { box-sizing: border-box; }
+body { margin: 0; background: rgb(245,237,224); font-family: Geist, sans-serif; }
+a { color: var(--primary-burgundy); }
+a:hover { color: var(--burgundy-deep-wine); }

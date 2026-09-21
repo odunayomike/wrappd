@@ -1,0 +1,769 @@
+/* ==========================================================================
+   Wrapp'd Responsive Overrides
+   Uses !important to override Figma-generated inline styles.
+   Breakpoints: Mobile < 768px | Tablet 768–1024px | Desktop > 1024px
+   ========================================================================== */
+
+/* ---------- Mobile (< 768px) ---------- */
+@media (max-width: 767px) {
+
+  /* --- NavBar --- */
+  [data-navbar] {
+    padding: 14px 16px !important;
+  }
+  /* Hide nav links and CTA on mobile (managed by SiteChrome hamburger) */
+  [data-navbar] > div:nth-child(2) {
+    display: none !important;
+  }
+  [data-navbar] > div:nth-child(3) {
+    display: none !important;
+  }
+
+  /* --- Promo Banner --- */
+  [data-promo] {
+    padding: 8px 12px !important;
+  }
+  [data-promo] > div {
+    flex-wrap: wrap !important;
+    flex-shrink: 1 !important;
+  }
+  [data-promo] span {
+    white-space: normal !important;
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    flex-shrink: 1 !important;
+  }
+
+  /* --- Section Padding --- */
+  [data-section] {
+    padding: 40px 16px !important;
+  }
+
+  /* --- Filter bar (shop page) --- */
+  [data-filter-bar] {
+    padding: 16px 16px !important;
+  }
+
+  /* --- Hero & Split: stack vertically --- */
+  [data-section="hero"],
+  [data-section="split"] {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  [data-section="hero"] > div,
+  [data-section="split"] > div {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* --- Product Detail: stack vertically --- */
+  [data-section="product-detail"] {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  [data-section="product-detail"] > div {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  /* Product image: reduce fixed height */
+  [data-product-gallery] [class*="fig-asset"] {
+    height: 300px !important;
+  }
+  /* Thumbnail row: distribute evenly */
+  [data-product-thumbs] {
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  [data-product-thumbs] > div {
+    width: auto !important;
+    min-width: 0 !important;
+    flex: 1 1 0 !important;
+    flex-shrink: 1 !important;
+    aspect-ratio: 1 / 1;
+  }
+  [data-product-thumbs] > div [class*="fig-asset"] {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  /* Product detail text wrapping */
+  [data-section="product-detail"] span {
+    white-space: normal !important;
+  }
+
+  /* --- Product items grid (What's inside): stack --- */
+  [data-grid="product-items"] {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  [data-grid="product-items"] > div {
+    width: 100% !important;
+  }
+
+  /* --- Related products grid (You may also like): stack --- */
+  [data-grid="related"] {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  [data-grid="related"] > div {
+    width: 100% !important;
+    flex-grow: 0 !important;
+  }
+
+  /* --- Testimonials grid: stack vertically --- */
+  [data-grid="testimonials"] {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  [data-grid="testimonials"] > div {
+    width: 100% !important;
+  }
+  [data-grid="testimonials"] span {
+    white-space: normal !important;
+  }
+
+  /* --- Product page section headers: stack --- */
+  [data-product-header] {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
+  }
+
+  /* --- Typography --- */
+  [data-heading="hero"] {
+    font-size: 36px !important;
+    line-height: 1.1 !important;
+    white-space: normal !important;
+  }
+  [data-heading="section"] {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    white-space: normal !important;
+  }
+
+  /* --- Fixed-width text blocks --- */
+  [data-text-block] {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  /* --- Product Grid: 1 column --- */
+  [data-grid="products"] {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 24px !important;
+  }
+  [data-grid="products"] > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  /* --- Extras Grid: 2 columns --- */
+  [data-grid="extras"] {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 12px !important;
+    height: auto !important;
+  }
+  [data-grid="extras"] > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  /* --- Split sections with fixed height: auto-size --- */
+  [data-section="split"] {
+    height: auto !important;
+  }
+  [data-section="split"] > div {
+    padding: 32px 16px !important;
+  }
+  /* Large stat numbers in split sections */
+  [data-section="split"] span[style*="fontSize: 72"],
+  [data-section="split"] span[style*="font-size: 72"] {
+    font-size: 48px !important;
+  }
+
+  /* --- CTA sections: stack text + button vertically --- */
+  [data-section="cta"] {
+    flex-direction: column !important;
+    gap: 24px !important;
+    align-items: flex-start !important;
+    height: auto !important;
+  }
+  [data-section="cta"] > div {
+    width: 100% !important;
+  }
+  [data-section="cta"] span {
+    white-space: normal !important;
+  }
+  [data-section="cta"] div[data-text-block] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  /* --- End-to-end / step cards section --- */
+  [data-split-image] {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  [data-step-cards] {
+    width: 100% !important;
+    gap: 16px !important;
+  }
+  [data-step-cards] > div {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* --- Instagram image grid: 2x2 on mobile --- */
+  [data-grid="instagram"] {
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+  [data-grid="instagram"] > div {
+    flex: 1 1 calc(50% - 6px) !important;
+    min-width: 0 !important;
+    height: 180px !important;
+  }
+
+  /* --- Trust bar: stack vertically --- */
+  [data-trust-bar] {
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 20px 16px !important;
+    align-items: center !important;
+  }
+  /* Hide the vertical divider lines (thin 1px-wide elements) */
+  [data-trust-bar] > div[style*="width: 1px"] {
+    display: none !important;
+  }
+  [data-trust-bar] span {
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  /* --- Footer: stack vertically on mobile --- */
+  [data-section="footer"] {
+    gap: 32px !important;
+  }
+
+  /* Footer top area: logo + link columns stack vertically.
+     Landing: data-footer-cols IS the top row (logo + links wrapper).
+     Shop/Corporate: there's a wrapper div above data-footer-cols. */
+  [data-footer-cols] {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+  [data-footer-cols] > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  /* Shop/Corporate: outer wrapper row that holds logo col + data-footer-cols */
+  [data-section="footer"] > div:first-child {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+  [data-section="footer"] > div:first-child > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Link columns (Shop/Company/Support): wrap in 2-across rows.
+     These sit in a row container with gap:80 as either:
+     - direct child of data-footer-cols (shop), or
+     - inside a nested row wrapper (landing/corporate). */
+  [data-section="footer"] [data-footer-cols] div[style*="flex"] {
+    flex-wrap: wrap !important;
+  }
+  /* The row wrapper around the 3 link columns */
+  [data-footer-cols] > div:last-child,
+  [data-footer-cols] > div > div:last-child {
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+  }
+  /* Individual link column sizing */
+  [data-footer-cols] > div:last-child > div,
+  [data-footer-cols] > div > div:last-child > div {
+    flex: 1 1 40% !important;
+    width: auto !important;
+    min-width: 100px !important;
+  }
+
+  /* Footer bottom bar: stack copyright + links */
+  [data-footer-bottom] {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: flex-start !important;
+  }
+  [data-footer-bottom] span {
+    white-space: normal !important;
+  }
+  [data-footer-bottom] > div {
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+  [data-footer-bottom] > div span {
+    white-space: normal !important;
+  }
+
+  /* --- Decorative elements: hide on mobile --- */
+  [data-decorative] {
+    display: none !important;
+  }
+
+  /* --- WhatsApp button: slightly smaller --- */
+  [data-whatsapp] {
+    width: 50px !important;
+    height: 52px !important;
+    bottom: 16px !important;
+    left: 16px !important;
+  }
+  [data-whatsapp] svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  /* --- Hamburger menu drawer (injected by SiteChrome) --- */
+  .mobile-nav-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100dvh;
+    background: rgb(74, 15, 28);
+    z-index: 9999;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  .mobile-nav-drawer.open {
+    right: 0;
+  }
+  .mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .mobile-nav-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .mobile-nav-drawer .nav-link {
+    display: block;
+    padding: 14px 0;
+    color: rgb(245, 237, 224);
+    font-family: Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+  .mobile-nav-drawer .nav-link:last-child {
+    border-bottom: none;
+  }
+  .mobile-nav-close {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: rgb(245, 237, 224);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+  .hamburger-btn {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    gap: 0;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+  }
+  .hamburger-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgb(245, 237, 224);
+    margin: 3px 0;
+    border-radius: 1px;
+    transition: 0.3s;
+    flex-shrink: 0;
+  }
+
+  /* Prevent body scroll when drawer open */
+  body.nav-open {
+    overflow: hidden !important;
+  }
+
+  /* General overflow helpers */
+  [data-site] {
+    overflow-x: hidden !important;
+  }
+  [data-site] span,
+  [data-site] p {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* Force wrapping on all heading-like elements that might overflow */
+  [data-heading] {
+    overflow-wrap: break-word !important;
+  }
+
+  /* Content sections: stack child rows */
+  [data-section="content"] {
+    flex-direction: column !important;
+    overflow-x: hidden !important;
+  }
+  [data-section="content"] > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    flex-basis: auto !important;
+  }
+
+  /* Image containers in hero should have sensible sizing */
+  [data-section="hero"] img,
+  [data-section="hero"] [class*="fig-asset"] {
+    min-height: 250px !important;
+    max-height: 400px !important;
+    width: 100% !important;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+  }
+
+  /* --- FAQ page --- */
+  [data-faq-card] {
+    padding: 24px 16px !important;
+    gap: 32px !important;
+    border-radius: 16px !important;
+  }
+  /* FAQ question text: allow wrapping */
+  [data-faq-card] span {
+    white-space: normal !important;
+  }
+  /* FAQ question rows: keep question + icon side by side */
+  [data-faq-card] div[style*="space-between"] {
+    gap: 12px !important;
+  }
+  /* SVG dividers: scale to fit */
+  [data-faq-card] svg {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  /* "Still wondering" CTA */
+  [data-faq-cta] {
+    height: auto !important;
+    padding: 24px 16px !important;
+    flex-shrink: 1 !important;
+    overflow: hidden !important;
+  }
+  /* CTA heading */
+  [data-faq-cta] > div:first-child > span:first-child {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+  }
+  /* CTA children: allow shrinking */
+  [data-faq-cta] > div {
+    flex-shrink: 1 !important;
+    max-width: 100% !important;
+  }
+  /* WhatsApp CTA button */
+  [data-faq-btn] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-shrink: 1 !important;
+    padding: 14px 24px !important;
+  }
+  [data-faq-btn] svg {
+    display: none !important;
+  }
+}
+
+/* ---------- Tablet (768px – 1024px) ---------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* --- NavBar --- */
+  [data-navbar] {
+    padding: 16px 24px !important;
+  }
+  /* Shrink nav link gap on tablet */
+  [data-navbar] > div:nth-child(2) > div {
+    gap: 18px !important;
+  }
+  /* Hide CTA button on tablet to save space */
+  [data-navbar] > div:nth-child(3) > div:last-child {
+    display: none !important;
+  }
+
+  /* --- Promo Banner --- */
+  [data-promo] span {
+    font-size: 12px !important;
+  }
+
+  /* --- Section Padding --- */
+  [data-section] {
+    padding: 60px 40px !important;
+  }
+
+  /* --- Filter bar (shop page) --- */
+  [data-filter-bar] {
+    padding: 20px 24px !important;
+  }
+
+  /* --- Hero & Split: keep row, reduce gap --- */
+  [data-section="hero"],
+  [data-section="split"] {
+    gap: 32px !important;
+  }
+
+  /* --- Product Detail: keep row, reduce gap --- */
+  [data-section="product-detail"] {
+    gap: 40px !important;
+    padding: 60px 40px !important;
+  }
+  [data-section="product-detail"] span {
+    white-space: normal !important;
+  }
+  [data-product-gallery] [class*="fig-asset"] {
+    height: 400px !important;
+  }
+  [data-product-thumbs] {
+    gap: 12px !important;
+  }
+  [data-product-thumbs] > div {
+    width: auto !important;
+    min-width: 0 !important;
+    flex: 1 1 0 !important;
+    flex-shrink: 1 !important;
+    aspect-ratio: 1 / 1;
+  }
+  [data-product-thumbs] > div [class*="fig-asset"] {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  /* --- Product items grid: 2 columns on tablet --- */
+  [data-grid="product-items"] {
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+  }
+  [data-grid="product-items"] > div {
+    flex: 1 1 calc(50% - 12px) !important;
+    min-width: 0 !important;
+  }
+
+  /* --- Testimonials: 2 columns on tablet --- */
+  [data-grid="testimonials"] {
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+  }
+  [data-grid="testimonials"] > div {
+    flex: 1 1 calc(50% - 12px) !important;
+    min-width: 0 !important;
+  }
+  [data-grid="testimonials"] span {
+    white-space: normal !important;
+  }
+
+  /* --- Product page section headers --- */
+  [data-product-header] span {
+    white-space: normal !important;
+  }
+
+  /* --- Typography --- */
+  [data-heading="hero"] {
+    font-size: 52px !important;
+    line-height: 1.1 !important;
+  }
+  [data-heading="section"] {
+    font-size: 36px !important;
+    line-height: 1.15 !important;
+  }
+
+  /* --- Fixed-width text blocks --- */
+  [data-text-block] {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  /* --- End-to-end step cards: reduce gap --- */
+  [data-split-image] {
+    height: 400px !important;
+  }
+  [data-step-cards] > div {
+    height: auto !important;
+  }
+
+  /* --- CTA sections: auto height --- */
+  [data-section="cta"] {
+    height: auto !important;
+  }
+
+  /* --- Product Grid: 2 columns --- */
+  [data-grid="products"] {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 28px !important;
+  }
+  [data-grid="products"] > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  /* --- Extras Grid: 3 columns --- */
+  [data-grid="extras"] {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 16px !important;
+    height: auto !important;
+  }
+  [data-grid="extras"] > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  /* --- Instagram grid: reduce gap on tablet --- */
+  [data-grid="instagram"] {
+    gap: 12px !important;
+  }
+
+  /* --- Trust bar: reduce gap on tablet --- */
+  [data-trust-bar] {
+    gap: 32px !important;
+    padding: 20px 24px !important;
+  }
+  [data-trust-bar] span {
+    white-space: normal !important;
+  }
+
+  /* --- Footer: wrap columns --- */
+  [data-footer-cols] {
+    flex-wrap: wrap !important;
+    gap: 32px !important;
+  }
+  [data-footer-cols] > div {
+    width: auto !important;
+    min-width: 120px !important;
+  }
+  /* Inner row of link columns: wrap and reduce gap */
+  [data-footer-cols] > div:last-child,
+  [data-footer-cols] > div > div:last-child {
+    flex-wrap: wrap !important;
+    gap: 32px !important;
+  }
+
+  /* --- Decorative elements: reduce opacity --- */
+  [data-decorative] {
+    opacity: 0.04 !important;
+  }
+
+  /* Content sections */
+  [data-section="content"] > div {
+    flex-basis: auto !important;
+  }
+
+  /* --- FAQ page --- */
+  [data-faq-card] {
+    padding: 48px 40px !important;
+  }
+  [data-faq-card] span {
+    white-space: normal !important;
+  }
+  [data-faq-cta] {
+    height: auto !important;
+  }
+  [data-faq-btn] {
+    max-width: 100% !important;
+  }
+}
+
+/* ---------- Shared (tablet + mobile) ---------- */
+@media (max-width: 1024px) {
+  /* Prevent horizontal overflow on all elements */
+  [data-site] {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  [data-site] * {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  [data-section],
+  [data-section="product-detail"],
+  [data-section="content"],
+  [data-section="cta"] {
+    overflow-x: hidden !important;
+  }
+
+  /* Make sure images scale */
+  [data-site] img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Figma asset background images: scale */
+  [data-site] [class*="fig-asset"] {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  /* Force flex-wrap on tight containers */
+  [data-section] > div {
+    flex-wrap: wrap !important;
+    min-width: 0 !important;
+  }
+
+  /* Footer link columns shouldn't be fixed width */
+  [data-footer-cols] > div:last-child > div,
+  [data-footer-cols] > div > div:last-child > div {
+    width: auto !important;
+    min-width: 100px !important;
+    flex-shrink: 1 !important;
+  }
+
+  /* Footer logo column shouldn't be fixed width */
+  [data-footer-cols] > div:first-child {
+    max-width: 100% !important;
+  }
+  [data-section="footer"] > div:first-child > div:first-child {
+    max-width: 100% !important;
+  }
+
+  /* Footer text should wrap */
+  [data-section="footer"] span {
+    white-space: normal !important;
+  }
+
+  /* Footer SVG divider should scale */
+  [data-section="footer"] > svg {
+    width: 100% !important;
+  }
+}
