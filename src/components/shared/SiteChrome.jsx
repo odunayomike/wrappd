@@ -243,6 +243,45 @@ export default function SiteChrome({ children }) {
       if (hideBlog() || ++blogTries > 40) clearInterval(blogInterval);
     }, 150);
 
+    // Fixed navbar on scroll
+    let navbar = wrap.querySelector('[data-navbar]');
+    let navPlaceholder = null;
+    let navOffsetTop = 0;
+    const initFixedNav = () => {
+      if (navbar) return true;
+      navbar = wrap.querySelector('[data-navbar]');
+      return !!navbar;
+    };
+    const onScroll = () => {
+      if (!navbar) return;
+      if (!navPlaceholder) {
+        // Measure initial offset once the navbar is in the DOM
+        navOffsetTop = navbar.getBoundingClientRect().top + window.scrollY;
+      }
+      if (window.scrollY >= navOffsetTop) {
+        if (!navbar.classList.contains('navbar-fixed')) {
+          // Insert a placeholder to prevent layout shift
+          navPlaceholder = document.createElement('div');
+          navPlaceholder.style.height = navbar.offsetHeight + 'px';
+          navbar.parentNode.insertBefore(navPlaceholder, navbar);
+          navbar.classList.add('navbar-fixed');
+        }
+      } else {
+        if (navbar.classList.contains('navbar-fixed')) {
+          navbar.classList.remove('navbar-fixed');
+          if (navPlaceholder) {
+            navPlaceholder.remove();
+            navPlaceholder = null;
+          }
+        }
+      }
+    };
+    let fixedNavTries = 0;
+    const fixedNavInterval = setInterval(() => {
+      if (initFixedNav() || ++fixedNavTries > 40) clearInterval(fixedNavInterval);
+    }, 150);
+    window.addEventListener('scroll', onScroll, { passive: true });
+
     // Hide per-page inline footers (Figma-generated)
     const hideFooter = () => {
       const spans = Array.from(wrap.querySelectorAll('span'));
@@ -268,10 +307,14 @@ export default function SiteChrome({ children }) {
     return () => {
       wrap.removeEventListener('click', onClick);
       wrap.removeEventListener('mouseover', onMove);
+      window.removeEventListener('scroll', onScroll);
       clearInterval(ddInterval);
       clearInterval(badgeInterval);
       clearInterval(blogInterval);
       clearInterval(footerInterval);
+      clearInterval(fixedNavInterval);
+      if (navbar) navbar.classList.remove('navbar-fixed');
+      if (navPlaceholder) navPlaceholder.remove();
     };
   }, [navigate, location.pathname, itemCount]);
 
