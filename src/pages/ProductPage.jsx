@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useCart } from '../context/CartContext.jsx';
 import { useToast } from '../components/shared/Toast.jsx';
 import { getProductBySlug, formatPrice, LUXE_SURCHARGE } from '../data/products.js';
+import useDocumentHead from '../hooks/useDocumentHead.js';
 import ProductView from '../components/product/ProductView.jsx';
 import '../components/product/fig-tokens.css';
 import '../components/product/fig-assets.css';
@@ -17,6 +18,11 @@ export default function ProductPage() {
   const messageRef = useRef('');
 
   const product = getProductBySlug(id);
+
+  useDocumentHead({
+    title: product ? product.name : 'Product Not Found',
+    description: product ? product.description : '',
+  });
 
   useEffect(() => {
     const root = rootRef.current;

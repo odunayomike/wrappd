@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import useDocumentHead from '../hooks/useDocumentHead.js';
 import { NavBar3 } from '../components/shop/NavBar3.jsx';
 import { PromoBanner } from '../components/shop/PromoBanner.jsx';
 import '../components/shop/fig-tokens.css';
@@ -13,6 +14,10 @@ const HEADING_FONT = 'Baskervville, -apple-system, BlinkMacSystemFont, "Segoe UI
 const orderNumber = `WRP-${Date.now()}`;
 
 export default function OrderConfirmationPage() {
+  useDocumentHead({
+    title: 'Order Confirmed',
+    description: 'Your gift is on its way.',
+  });
   const navigate = useNavigate();
 
   return (

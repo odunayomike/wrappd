@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import FaqPageView from '../components/faq/FaqPage.jsx';
+import useDocumentHead from '../hooks/useDocumentHead.js';
 import '../components/faq/fig-tokens.css';
 
 // The Figma source only authored answer copy for one FAQ item ("How fast can
@@ -7,6 +8,10 @@ import '../components/faq/fig-tokens.css';
 // in the file. All rows still toggle (icon flips + <-> x) for real click
 // feedback; only the one with real copy shows/hides its answer.
 export default function FaqPage() {
+  useDocumentHead({
+    title: 'FAQ',
+    description: 'Delivery, payment, and everything else you need to know.',
+  });
   const rootRef = useRef(null);
 
   useEffect(() => {

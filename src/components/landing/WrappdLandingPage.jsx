@@ -645,7 +645,7 @@ export function WrappdLandingPage(_p = {}) {
             flexGrow: 1,
             flexBasis: 0,
           }}>
-            <div style={{
+            <div data-card-img style={{
               position: "relative",
               height: 416,
               borderRadius: "48px 48px 0px 0px",
@@ -1003,7 +1003,7 @@ export function WrappdLandingPage(_p = {}) {
                 </div>
               </div>
             </div>
-            <div className="fig-asset-d0ea050515cb3024-294660e5" style={{
+            <div data-card-img className="fig-asset-d0ea050515cb3024-294660e5" style={{
               position: "relative",
               height: 416,
               borderRadius: "0px 0px 48px 48px",

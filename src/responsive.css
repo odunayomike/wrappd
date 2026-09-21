@@ -453,6 +453,13 @@
     object-fit: cover;
   }
 
+  /* --- Card images (landing page Personal/Corporate cards) --- */
+  [data-card-img] {
+    height: 240px !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
   /* --- FAQ page --- */
   [data-faq-card] {
     padding: 24px 16px !important;
@@ -662,6 +669,13 @@
   }
   [data-trust-bar] span {
     white-space: normal !important;
+  }
+
+  /* --- Card images: normalize background on tablet --- */
+  [data-card-img] {
+    height: 320px !important;
+    background-size: cover !important;
+    background-position: center !important;
   }
 
   /* --- Footer: wrap columns --- */

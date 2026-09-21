@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ShopGiftBoxesView from '../components/shop/ShopGiftBoxesView.jsx';
+import useDocumentHead from '../hooks/useDocumentHead.js';
 import '../components/shop/fig-tokens.css';
 import '../components/shop/fig-assets.css';
 
@@ -8,6 +9,10 @@ const MAROON = 'rgb(106,30,46)';
 const ACTIVE_BG = 'rgb(74,15,28)', INACTIVE_BG = 'rgb(245,237,224)';
 
 export default function ShopPage() {
+  useDocumentHead({
+    title: 'Shop Gift Boxes',
+    description: 'Browse curated gift boxes for birthdays, love, milestones and more.',
+  });
   const rootRef = useRef(null);
   const navigate = useNavigate();
 

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext.jsx';
 import { formatPrice } from '../data/products.js';
+import useDocumentHead from '../hooks/useDocumentHead.js';
 import { NavBar3 } from '../components/shop/NavBar3.jsx';
 import { PromoBanner } from '../components/shop/PromoBanner.jsx';
 import '../components/shop/fig-tokens.css';
@@ -13,6 +14,10 @@ const FONT = 'Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hel
 const HEADING_FONT = 'Baskervville, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
 
 export default function CartPage() {
+  useDocumentHead({
+    title: 'Your Cart',
+    description: 'Review your gift box selections.',
+  });
   const { items, subtotal, dispatch } = useCart();
   const navigate = useNavigate();
 

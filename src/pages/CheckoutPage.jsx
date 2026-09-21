@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext.jsx';
 import { formatPrice } from '../data/products.js';
+import useDocumentHead from '../hooks/useDocumentHead.js';
 import { NavBar3 } from '../components/shop/NavBar3.jsx';
 import { PromoBanner } from '../components/shop/PromoBanner.jsx';
 import '../components/shop/fig-tokens.css';
@@ -24,6 +25,10 @@ const labelStyle = {
 };
 
 export default function CheckoutPage() {
+  useDocumentHead({
+    title: 'Checkout',
+    description: 'Complete your order.',
+  });
   const { items, subtotal, dispatch } = useCart();
   const navigate = useNavigate();
 
