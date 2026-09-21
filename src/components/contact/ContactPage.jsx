@@ -111,7 +111,7 @@ export function ContactPage(_p = {}) {
             lineHeight: 1.600000023841858,
             color: "var(--burgundy-deep-wine)",
             flexShrink: 0,
-          }}>Have a question about custom curations, shipping times, or corporate options? Drop us a line and our Melbourne studio team will get right back to you.</span>
+          }}>Have a question about custom curations, shipping times, or corporate options? Drop us a line and our Lagos studio team will get right back to you.</span>
         </div>
       </div>
       <div data-section="split" style={{
@@ -491,7 +491,7 @@ export function ContactPage(_p = {}) {
               color: "var(--primary-burgundy)",
               flexShrink: 0,
               alignSelf: "stretch",
-            }}>Nestled in the heart of Melbourne, our creative packing studio is where we custom curate, wrap, and hand-tie every single premium box.</span>
+            }}>Nestled in the heart of Lagos, our creative packing studio is where we custom curate, wrap, and hand-tie every single premium box.</span>
           </div>
           <div style={{
             position: "relative",
@@ -587,7 +587,7 @@ export function ContactPage(_p = {}) {
                   lineHeight: "100%",
                   color: "var(--burgundy-deep-wine)",
                   flexShrink: 0,
-                }}>123 Gift Lane, Melbourne, VIC 3000</span>
+                }}>123 Gift Lane, Victoria Island, Lagos</span>
               </div>
             </div>
             <div style={{
@@ -1095,7 +1095,7 @@ export function ContactPage(_p = {}) {
               color: "var(--primary-burgundy)",
               flexShrink: 0,
               alignSelf: "stretch",
-            }}>Lagos and Melbourne local orders are delivered next-day. Standard shipping across Australia takes 3–5 business days, while express options arrive within 1–2 business days.</span>
+            }}>Lagos local orders are delivered next-day. Standard shipping across Nigeria takes 3–5 business days, while express options arrive within 1–2 business days.</span>
           </div>
           <div style={{
             position: "relative",

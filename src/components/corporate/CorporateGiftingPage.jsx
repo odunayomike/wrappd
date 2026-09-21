@@ -1379,7 +1379,7 @@ export function CorporateGiftingPage(_p = {}) {
               color: "var(--tan-ivory)",
               flexShrink: 0,
               alignSelf: "stretch",
-            }}>Wrapp'd is Australia's premium bespoke gift-boxing platform. Hand-packed with boutique local treats and hand-tied ribbons.</span>
+            }}>Wrapp'd is Nigeria's premium bespoke gift-boxing platform. Hand-packed with boutique local treats and hand-tied ribbons.</span>
             <div style={{
               position: "relative",
               display: "flex",

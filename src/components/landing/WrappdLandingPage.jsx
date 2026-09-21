@@ -623,7 +623,7 @@ export function WrappdLandingPage(_p = {}) {
             lineHeight: 1.5,
             color: "var(--burgundy-deep-wine)",
             flexShrink: 0,
-          }}>Every Wrapp'd box is a handpicked collection of premium Australian products, beautifully packaged and delivered with care.</span>
+          }}>Every Wrapp'd box is a handpicked collection of premium Nigerian products, beautifully packaged and delivered with care.</span>
         </div>
         <div style={{
           position: "relative",
@@ -2461,7 +2461,7 @@ export function WrappdLandingPage(_p = {}) {
                   color: "var(--burgundy-deep-wine)",
                   flexShrink: 0,
                   alignSelf: "stretch",
-                }}>We neatly assemble, wrap, bow-tie and safely dispatch your gift using carbon-neutral Australian courier systems.</span>
+                }}>We neatly assemble, wrap, bow-tie and safely dispatch your gift using reliable Nigerian courier systems.</span>
               </div>
             </div>
             <div style={{
@@ -3837,7 +3837,7 @@ export function WrappdLandingPage(_p = {}) {
               color: "rgb(228,231,236)",
               flexShrink: 0,
               alignSelf: "stretch",
-            }}>We help you connect when you can't be in the room. Delivering heartfelt connections across Australia daily.</span>
+            }}>We help you connect when you can't be in the room. Delivering heartfelt connections across Nigeria daily.</span>
           </div>
         </div>
         <div style={{
@@ -4222,7 +4222,7 @@ export function WrappdLandingPage(_p = {}) {
             color: "var(--burgundy-deep-wine)",
             flexShrink: 0,
             alignSelf: "stretch",
-          }}>Join thousands of Australians sending boutique joy down the street or across the nation.</span>
+          }}>Join thousands of Nigerians sending boutique joy down the street or across the nation.</span>
         </div>
         <div style={{
           position: "relative",
@@ -4325,7 +4325,7 @@ export function WrappdLandingPage(_p = {}) {
               color: "var(--tan-ivory)",
               flexShrink: 0,
               alignSelf: "stretch",
-            }}>Wrapp'd is Australia's premium bespoke gift-boxing platform. Hand-packed with boutique local treats and hand-tied ribbons.</span>
+            }}>Wrapp'd is Nigeria's premium bespoke gift-boxing platform. Hand-packed with boutique local treats and hand-tied ribbons.</span>
             <div style={{
               position: "relative",
               display: "flex",
