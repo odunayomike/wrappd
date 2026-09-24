@@ -4,6 +4,7 @@ import { WrappDLogo } from './WrappDLogo.jsx';
 import './fig-assets.css';
 import personalGiftingImg from './assets/6769d0ea7dea69ee.jpg';
 import endToEndImg from './assets/d4fafedf36312ba6.jpg';
+import heroImg from './assets/f45862edab5f0474.png';
 
 // figma node: 88:987 wrappd-landing-page
 export function WrappdLandingPage(_p = {}) {
@@ -242,7 +243,7 @@ export function WrappdLandingPage(_p = {}) {
         </div>
         <div style={{
           position: "relative",
-          height: 480,
+          height: 600,
           overflow: "hidden",
           borderRadius: 24,
           display: "flex",
@@ -253,7 +254,7 @@ export function WrappdLandingPage(_p = {}) {
           width: "calc(50% - 30px)",
           flexShrink: 0,
         }}>
-          <div className="fig-asset-f45862edab5f0474" style={{ position: "relative", flexGrow: 1, alignSelf: "stretch" }} />
+          <div style={{ position: "relative", flexGrow: 1, alignSelf: "stretch", background: `url(${endToEndImg}) center / cover no-repeat` }} />
         </div>
       </div>
       <div data-section="content" style={{
@@ -2150,7 +2151,7 @@ export function WrappdLandingPage(_p = {}) {
             position: "relative",
             width: "calc(60% - 40px)",
             height: 569,
-            background: `url(${endToEndImg}) center center / cover no-repeat`,
+            background: `url(${heroImg}) center center / cover no-repeat`,
             borderRadius: 24,
             flexShrink: 0,
           }} />
