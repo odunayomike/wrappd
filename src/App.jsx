@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import LandingPage from './pages/LandingPage.jsx';
 import CorporatePage from './pages/CorporatePage.jsx';
 import PersonalPage from './pages/PersonalPage.jsx';
@@ -13,9 +14,18 @@ import CheckoutPage from './pages/CheckoutPage.jsx';
 import OrderConfirmationPage from './pages/OrderConfirmationPage.jsx';
 import SiteChrome from './components/shared/SiteChrome.jsx';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <SiteChrome>
         <Routes>
           <Route path="/" element={<LandingPage />} />

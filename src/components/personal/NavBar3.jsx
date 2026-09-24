@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { WrappDLogo } from './WrappDLogo.jsx';
 
 // figma node: 114:1558 NavBar
@@ -21,18 +22,19 @@ export function NavBar3(_p = {}) {
       position: "relative",
       ...props.style,
     }}>
-      <div style={{
+      <Link to="/" style={{
           position: "relative",
           width: 109.585,
           height: 33.66,
           flexShrink: 0,
           color: "var(--primary-warm-tan)",
+          textDecoration: "none",
         }}>
         <WrappDLogo
           style={{ transform: "scale(0.529, 0.529)", transformOrigin: "0 0", color: "var(--primary-warm-tan)" }}
           property1={"monochrome light"}
         />
-      </div>
+      </Link>
       <div style={{
         position: "relative",
         display: "flex",
